@@ -1,19 +1,46 @@
 <div class="tab-group">
   <mat-tab-group>
     <mat-tab label="DC Comics">
-      <div *ngFor="let hero of DCHeroes">
-        <div class="hero">
-          <span>{{ hero.name }}</span>
-          <img src="{{ hero.image }}" height="256px" />
-        </div>
-      </div>
+      <mat-grid-list cols="4">
+        <mat-grid-tile *ngFor="let hero of DCHeroes">
+          <mat-grid-tile-header>
+            <div class="title">
+              <span>{{ hero.name }}</span>
+            </div>
+          </mat-grid-tile-header>
+          <div class="hero">
+            <div>
+              <img src="{{ hero.image }}" height="256px" />
+            </div>
+          </div>
+          <mat-grid-tile-footer>
+            <div class="check-box">
+              <input type="checkbox" [value]="hero.selected" />
+            </div>
+          </mat-grid-tile-footer>
+        </mat-grid-tile>
+      </mat-grid-list>
     </mat-tab>
     <mat-tab label="Marvel Comics">
-      <div *ngFor="let hero of MarvelHeroes">
-        <div class="hero">
-          <span>{{ hero.name }}</span>
-          <img [src]="hero.image" height="256px" />
-        </div></div
-    ></mat-tab>
+      <mat-grid-list cols="4">
+        <mat-grid-tile *ngFor="let hero of MarvelHeroes">
+          <mat-grid-tile-header>
+            <div class="title">
+              <span>{{ hero.name }}</span>
+            </div>
+          </mat-grid-tile-header>
+          <div class="hero">
+            <div>
+              <img src="{{ hero.image }}" height="256px" />
+            </div>
+          </div>
+          <mat-grid-tile-footer>
+            <div class="check-box">
+              <input type="checkbox" [value]="hero.selected" />
+            </div>
+          </mat-grid-tile-footer>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </mat-tab>
   </mat-tab-group>
 </div>
