@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 
 .title {
@@ -24,5 +23,25 @@
   width: 90%;
   margin-left: auto;
   margin-right: auto;
-  
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .battle-button {
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+  }
 }

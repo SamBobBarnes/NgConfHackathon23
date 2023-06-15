@@ -211,4 +211,11 @@ export class HeroListComponent {
       selected: false,
     },
   ];
+
+  Battle() {
+    console.log('Battle');
+    let DC = this.DCHeroes.filter((x) => x.selected);
+    let Marvel = this.DCHeroes.filter((x) => x.selected);
+    console.log({ DC, Marvel });
+  }
 }

@@ -1,3 +1,11 @@
+<div class="header">
+  <h1>Battle Your Favorite Heroes!</h1>
+  <p>
+    Pick up to two DC and two Marvel heroes to battle it out in your very own
+    MadLib arena!
+  </p>
+</div>
+
 <div class="tab-group">
   <mat-tab-group>
     <mat-tab label="DC Comics">
@@ -36,11 +44,20 @@
           </div>
           <mat-grid-tile-footer>
             <div class="check-box">
-              <input type="checkbox" [value]="hero.selected" />
+              <mat-checkbox
+                [(ngModel)]="hero.selected"
+                color="Primary"
+              ></mat-checkbox>
             </div>
           </mat-grid-tile-footer>
         </mat-grid-tile>
       </mat-grid-list>
     </mat-tab>
   </mat-tab-group>
+</div>
+
+<div class="footer">
+  <button mat-button color="primary" class="battle-button" (click)="Battle()">
+    Battle!
+  </button>
 </div>
